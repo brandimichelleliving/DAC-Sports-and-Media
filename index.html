@@ -8,25 +8,39 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="noise-overlay" aria-hidden="true"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- TOP TICKER -->
+<div class="top-ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Available for new partnerships &mdash; Q4 2026</span>
+    <span>Strategic Partnerships &amp; Sponsorship Development</span>
+    <span>Distribution Strategy &amp; Content Licensing</span>
+    <span>Go-to-Market Planning &amp; Campaign Execution</span>
+    <span>Available for new partnerships &mdash; Q4 2026</span>
+    <span>Strategic Partnerships &amp; Sponsorship Development</span>
+    <span>Distribution Strategy &amp; Content Licensing</span>
+    <span>Go-to-Market Planning &amp; Campaign Execution</span>
+  </div>
+</div>
 
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#top" class="brand">
       <span class="brand-mark">DAC</span>
-      <span class="brand-name">Sports &amp; Media</span>
+      <span class="brand-name">Sports<em>&amp;</em>Media</span>
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="#services">Services</a>
-      <a href="#who-we-serve">Who I Serve</a>
-      <a href="#about">Background</a>
-      <a href="#track-record">Track Record</a>
+      <a href="#services"><span class="nav-num">01</span>Services</a>
+      <a href="#who-we-serve"><span class="nav-num">02</span>Who I Serve</a>
+      <a href="#about"><span class="nav-num">03</span>Background</a>
+      <a href="#track-record"><span class="nav-num">04</span>Track Record</a>
       <a href="#contact" class="nav-cta">Start a Conversation</a>
     </nav>
 
@@ -39,10 +53,12 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="hero-spotlight">
+    <div class="hero-bg-type" aria-hidden="true">DAC</div>
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Partnerships &middot; Distribution &middot; Go-to-Market</p>
-      <h1 class="reveal">Strategic partnerships that move sports &amp; media forward.</h1>
+      <p class="eyebrow reveal">Partnerships &middot; Distribution &middot; Go&#8209;to&#8209;Market</p>
+      <h1 class="reveal">Strategic partnerships<br>that move sports &amp; media <em>forward</em>.</h1>
       <p class="hero-sub reveal">I help streaming platforms, sports and lifestyle brands, athlete brands, and mid-market media companies build the sponsorship portfolios, distribution deals, and go-to-market plans that turn audience attention into revenue.</p>
       <div class="hero-actions reveal">
         <a href="#contact" class="btn btn-primary">Start a Conversation</a>
@@ -66,68 +82,75 @@
     </div>
   </section>
 
-  <!-- LOGO / PARTNER STRIP -->
-  <section class="partner-strip">
-    <div class="container">
-      <p class="partner-strip-label">Content &amp; distribution relationships include</p>
-      <div class="partner-strip-list">
-        <span>Disney</span>
-        <span>Warner Bros.</span>
-        <span>NBCUniversal</span>
-        <span>Amazon</span>
-        <span>US Swimming</span>
-        <span>US Ski &amp; Snowboarding</span>
-        <span>US Track &amp; Field</span>
-      </div>
+  <!-- PARTNER MARQUEE -->
+  <div class="partner-marquee">
+    <p class="partner-marquee-label">Content &amp; distribution relationships</p>
+    <div class="marquee-track">
+      <span>Disney</span><span class="dot">&bull;</span>
+      <span>Warner&nbsp;Bros.</span><span class="dot">&bull;</span>
+      <span>NBCUniversal</span><span class="dot">&bull;</span>
+      <span>Amazon</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Swimming</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Ski&nbsp;&amp;&nbsp;Snowboarding</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Track&nbsp;&amp;&nbsp;Field</span><span class="dot">&bull;</span>
+      <span>Disney</span><span class="dot">&bull;</span>
+      <span>Warner&nbsp;Bros.</span><span class="dot">&bull;</span>
+      <span>NBCUniversal</span><span class="dot">&bull;</span>
+      <span>Amazon</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Swimming</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Ski&nbsp;&amp;&nbsp;Snowboarding</span><span class="dot">&bull;</span>
+      <span>US&nbsp;Track&nbsp;&amp;&nbsp;Field</span><span class="dot">&bull;</span>
     </div>
-  </section>
+  </div>
 
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
-      <p class="section-eyebrow reveal">Services</p>
-      <h2 class="section-title reveal">Fractional partnerships leadership, built for growth-stage teams.</h2>
-      <p class="section-sub reveal">Engage the full function or a single deal — from strategy through signed contract.</p>
+      <div class="section-head">
+        <p class="section-eyebrow reveal">01 &mdash; Services</p>
+        <h2 class="section-title reveal">Fractional partnerships leadership, built for growth&#8209;stage teams.</h2>
+        <p class="section-sub reveal">Engage the full function or a single deal &mdash; from strategy through signed contract.</p>
+      </div>
 
-      <div class="card-grid reveal">
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10M4 10L12 4L20 10M4 10H20M20 10V20M9 20V14H15V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="service-list">
+        <article class="service-row reveal">
+          <span class="service-index">01</span>
+          <div class="service-body">
+            <h3>Fractional Head of Partnerships / GTM Strategy</h3>
+            <p>Embedded leadership for teams that need senior partnerships and go-to-market direction without a full-time hire.</p>
           </div>
-          <h3>Fractional Head of Partnerships / GTM Strategy</h3>
-          <p>Embedded leadership for teams that need senior partnerships and go-to-market direction without a full-time hire.</p>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M12 3L4 6.5V11C4 15.4 7.4 19.4 12 21C16.6 19.4 20 15.4 20 11V6.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="service-row reveal">
+          <span class="service-index">02</span>
+          <div class="service-body">
+            <h3>Partnership &amp; Sponsorship Deal Structuring</h3>
+            <p>Negotiation and contract structuring for sponsorships and brand partnerships, from term sheet to signature.</p>
           </div>
-          <h3>Partnership &amp; Sponsorship Deal Structuring</h3>
-          <p>Negotiation and contract structuring for sponsorships and brand partnerships, from term sheet to signature.</p>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6H20M4 6V18H20V6M4 6L12 13L20 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="service-row reveal">
+          <span class="service-index">03</span>
+          <div class="service-body">
+            <h3>Distribution &amp; Content Strategy</h3>
+            <p>FAST, SVOD, AVOD, and linear distribution planning and content licensing strategy for platforms and rights holders.</p>
           </div>
-          <h3>Distribution &amp; Content Strategy</h3>
-          <p>FAST, SVOD, AVOD, and linear distribution planning and content licensing strategy for platforms and rights holders.</p>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7M21 7H15M21 7V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="service-row reveal">
+          <span class="service-index">04</span>
+          <div class="service-body">
+            <h3>Go-to-Market Planning &amp; Campaign Execution</h3>
+            <p>End-to-end GTM plans and paid media partnership campaigns designed to hit subscriber and revenue targets.</p>
           </div>
-          <h3>Go-to-Market Planning &amp; Campaign Execution</h3>
-          <p>End-to-end GTM plans and paid media partnership campaigns designed to hit subscriber and revenue targets.</p>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 8V12L15 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="service-row reveal">
+          <span class="service-index">05</span>
+          <div class="service-body">
+            <h3>Audience &amp; Consumer Insights</h3>
+            <p>Research-backed audience and brand strategy, including multicultural marketing insight, to sharpen every deal.</p>
           </div>
-          <h3>Audience &amp; Consumer Insights</h3>
-          <p>Research-backed audience and brand strategy, including multicultural marketing insight, to sharpen every deal.</p>
         </article>
       </div>
     </div>
@@ -135,28 +158,31 @@
 
   <!-- WHO I SERVE -->
   <section class="who-serve" id="who-we-serve">
+    <div class="hero-glow who-glow" aria-hidden="true"></div>
     <div class="container">
-      <p class="section-eyebrow reveal">Who I Serve</p>
-      <h2 class="section-title reveal">Built for teams scaling distribution and sponsorship revenue.</h2>
+      <div class="section-head">
+        <p class="section-eyebrow reveal">02 &mdash; Who I Serve</p>
+        <h2 class="section-title reveal">Built for teams scaling distribution and sponsorship revenue.</h2>
+      </div>
 
       <div class="who-grid reveal">
         <div class="who-card">
-          <span class="who-index">01</span>
+          <span class="who-index">I</span>
           <h3>Emerging FAST channels &amp; streaming platforms</h3>
           <p>Needing distribution and content strategy to grow reach and retention.</p>
         </div>
         <div class="who-card">
-          <span class="who-index">02</span>
+          <span class="who-index">II</span>
           <h3>Sports, lifestyle &amp; consumer brands</h3>
           <p>Scaling sponsorship portfolios across live events and digital platforms.</p>
         </div>
         <div class="who-card">
-          <span class="who-index">03</span>
+          <span class="who-index">III</span>
           <h3>Athlete &amp; creator brands</h3>
           <p>Seeking structured brand partnerships and hands-on deal support.</p>
         </div>
         <div class="who-card">
-          <span class="who-index">04</span>
+          <span class="who-index">IV</span>
           <h3>Mid-market media &amp; entertainment companies</h3>
           <p>Without in-house partnerships leadership, needing senior support fast.</p>
         </div>
@@ -166,26 +192,28 @@
 
   <!-- ABOUT / BACKGROUND -->
   <section class="about" id="about">
-    <div class="container about-inner">
-      <div class="about-copy reveal">
-        <p class="section-eyebrow">Background</p>
-        <h2 class="section-title">A partnerships operator, not just a strategist.</h2>
-        <p>I'm Brandi, founder of DAC Sports &amp; Media. My work sits at the intersection of strategic partnerships and sponsorship development, distribution and content licensing, and go-to-market execution &mdash; built on a foundation of contract negotiation, consumer research, and brand strategy.</p>
-        <p>Over the course of my career I've overseen $50M+ in distribution and marketing commitments, generated $20M+ in revenue across more than 100 paid media partnership campaigns, and built and scaled a $10M+ sponsorship portfolio spanning live events and digital platforms. I currently manage 25+ active content partner relationships, including Disney, Warner Bros., NBCUniversal, and Amazon, and I've led sponsorship programs for 45+ teams across the Big 5 sports leagues.</p>
-        <p>I've also worked directly with Olympic and Paralympic organizations &mdash; including US Swimming, US Ski &amp; Snowboarding, and US Track &amp; Field &mdash; managing partnerships that require precision, trust, and long-term relationship stewardship. Across 150+ end-to-end brand partnerships, my campaigns have driven an average subscription lift of 10&ndash;13%.</p>
-        <p>Today, I bring that same operating experience to emerging platforms and brands as a fractional partner &mdash; embedded enough to move deals forward, senior enough to set the strategy.</p>
-      </div>
+    <div class="container">
+      <p class="section-eyebrow reveal">03 &mdash; Background</p>
+      <p class="pull-quote reveal">&ldquo;I'm a partnerships operator, not just a strategist &mdash; embedded enough to move deals forward, senior enough to set the strategy.&rdquo;</p>
 
-      <div class="about-expertise reveal">
-        <h3>Core Expertise</h3>
-        <ul class="expertise-list">
-          <li>Strategic Partnerships &amp; Sponsorship Development</li>
-          <li>Distribution Strategy &amp; Content Licensing (FAST, SVOD, AVOD, linear)</li>
-          <li>Go-to-Market Planning &amp; Campaign Execution</li>
-          <li>Contract Negotiation &amp; Deal Structuring</li>
-          <li>Consumer Research &amp; Audience Insights</li>
-          <li>Brand Strategy &amp; Multicultural Marketing</li>
-        </ul>
+      <div class="about-inner">
+        <div class="about-copy reveal">
+          <p>I'm Brandi, founder of DAC Sports &amp; Media. My work sits at the intersection of strategic partnerships and sponsorship development, distribution and content licensing, and go-to-market execution &mdash; built on a foundation of contract negotiation, consumer research, and brand strategy.</p>
+          <p>Over the course of my career I've overseen $50M+ in distribution and marketing commitments, generated $20M+ in revenue across more than 100 paid media partnership campaigns, and built and scaled a $10M+ sponsorship portfolio spanning live events and digital platforms. I currently manage 25+ active content partner relationships, including Disney, Warner Bros., NBCUniversal, and Amazon, and I've led sponsorship programs for 45+ teams across the Big 5 sports leagues.</p>
+          <p>I've also worked directly with Olympic and Paralympic organizations &mdash; including US Swimming, US Ski &amp; Snowboarding, and US Track &amp; Field &mdash; managing partnerships that require precision, trust, and long-term relationship stewardship. Across 150+ end-to-end brand partnerships, my campaigns have driven an average subscription lift of 10&ndash;13%.</p>
+        </div>
+
+        <div class="about-expertise reveal">
+          <h3>Core Expertise</h3>
+          <ul class="expertise-list">
+            <li><span>Strategic Partnerships &amp; Sponsorship Development</span></li>
+            <li><span>Distribution Strategy &amp; Content Licensing</span><small>FAST, SVOD, AVOD, linear</small></li>
+            <li><span>Go-to-Market Planning &amp; Campaign Execution</span></li>
+            <li><span>Contract Negotiation &amp; Deal Structuring</span></li>
+            <li><span>Consumer Research &amp; Audience Insights</span></li>
+            <li><span>Brand Strategy &amp; Multicultural Marketing</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -193,8 +221,10 @@
   <!-- TRACK RECORD -->
   <section class="track-record" id="track-record">
     <div class="container">
-      <p class="section-eyebrow reveal">Track Record</p>
-      <h2 class="section-title reveal">Results, not just relationships.</h2>
+      <div class="section-head">
+        <p class="section-eyebrow reveal">04 &mdash; Track Record</p>
+        <h2 class="section-title reveal">Results, not just relationships.</h2>
+      </div>
 
       <div class="stat-grid reveal">
         <div class="stat-card">
@@ -222,7 +252,7 @@
           <span class="stat-label">Team sponsorships managed across the Big 5 sports leagues</span>
         </div>
         <div class="stat-card">
-          <span class="stat-num" data-static>Olympic &amp; Paralympic</span>
+          <span class="stat-num stat-num-text" data-static>Olympic &amp; Paralympic</span>
           <span class="stat-label">Partnership management with US Swimming, US Ski &amp; Snowboarding, and US Track &amp; Field</span>
         </div>
         <div class="stat-card">
@@ -235,10 +265,11 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
+    <div class="hero-glow contact-glow" aria-hidden="true"></div>
     <div class="container contact-inner">
       <div class="contact-copy reveal">
         <p class="section-eyebrow">Let's Talk</p>
-        <h2 class="section-title">Have a partnership, distribution deal, or GTM plan on the table?</h2>
+        <h2 class="contact-title">Have a partnership, distribution deal, or GTM plan on the table?</h2>
         <p class="section-sub">Tell me a bit about what you're building. I respond personally to every inquiry.</p>
 
         <div class="contact-details">
@@ -283,19 +314,24 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark">DAC</span>
-      <span class="brand-name">Sports &amp; Media</span>
-    </a>
-    <nav class="footer-nav">
-      <a href="#services">Services</a>
-      <a href="#who-we-serve">Who I Serve</a>
-      <a href="#about">Background</a>
-      <a href="#track-record">Track Record</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <p class="footer-meta">&copy; <span id="year"></span> DAC Sports &amp; Media. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-top">
+      <a href="#top" class="brand">
+        <span class="brand-mark">DAC</span>
+        <span class="brand-name">Sports<em>&amp;</em>Media</span>
+      </a>
+      <a href="#contact" class="footer-cta">Start a Conversation &rarr;</a>
+    </div>
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#who-we-serve">Who I Serve</a>
+        <a href="#about">Background</a>
+        <a href="#track-record">Track Record</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-meta">&copy; <span id="year"></span> DAC Sports &amp; Media. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
