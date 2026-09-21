@@ -79,39 +79,5 @@
     counters.forEach(function (el) { counterObserver.observe(el); });
   }
 
-  // Contact form — opens a prefilled email to the site owner
-  var form = document.getElementById("contact-form");
-  var note = document.getElementById("form-note");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var company = form.company.value.trim();
-      var interest = form.interest.value;
-      var message = form.message.value.trim();
-
-      var subject = "New inquiry: " + interest;
-      var bodyLines = [
-        "Name: " + name,
-        "Email: " + email,
-        "Company/Brand: " + (company || "—"),
-        "Interested in: " + interest,
-        "",
-        message
-      ];
-
-      var mailto =
-        "mailto:brandimichelleliving@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-      window.location.href = mailto;
-
-      if (note) {
-        note.textContent = "Opening your email client to send this message…";
-        note.classList.add("success");
-      }
-    });
-  }
+  // Contact form submission is handled by js/contact-form.js (Supabase)
 })();
