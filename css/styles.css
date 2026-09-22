@@ -328,13 +328,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-bottom: 76px;
 }
 
+.hero-stats-block {
+  max-width: 760px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line-dark);
+}
+.hero-stats-label {
+  font-family: var(--font-mono-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--muted-on-dark-soft);
+  margin: 0 0 24px;
+}
+
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 760px;
-  padding-top: 44px;
-  border-top: 1px solid var(--line-dark);
   margin: 0;
 }
 .hero-stat dt {
