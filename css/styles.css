@@ -470,6 +470,24 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   margin: 0;
 }
 
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.service-tags li {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--gold-deep);
+  background: rgba(224, 170, 62, 0.08);
+  border: 1px solid rgba(169, 120, 31, 0.3);
+  border-radius: 999px;
+  padding: 6px 16px;
+}
+
 /* ---------------- Who I Serve (dark) ---------------- */
 
 .who-serve { background: var(--black); position: relative; overflow: hidden; }
