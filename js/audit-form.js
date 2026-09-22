@@ -1,7 +1,7 @@
 import { supabase } from "./supabase-client.js";
 
-var form = document.getElementById("contact-form");
-var note = document.getElementById("form-note");
+var form = document.getElementById("audit-form");
+var note = document.getElementById("audit-form-note");
 
 if (form) {
   form.addEventListener("submit", async function (e) {
@@ -11,7 +11,8 @@ if (form) {
     var name = form.name.value.trim();
     var email = form.email.value.trim();
     var company = form.company.value.trim();
-    var interest = form.interest.value;
+    var focusArea = form.focus.value;
+    var availability = form.availability.value.trim();
     var message = form.message.value.trim();
 
     if (submitBtn) submitBtn.disabled = true;
@@ -20,12 +21,13 @@ if (form) {
       note.classList.remove("success", "error");
     }
 
-    var result = await supabase.from("inquiries").insert({
+    var result = await supabase.from("audit_requests").insert({
       name: name,
       email: email,
       company: company || null,
-      interest: interest,
-      message: message
+      focus_area: focusArea,
+      availability: availability || null,
+      message: message || null
     });
 
     if (submitBtn) submitBtn.disabled = false;
@@ -34,7 +36,7 @@ if (form) {
       console.error(result.error);
       if (note) {
         note.textContent =
-          "Something went wrong sending your message. Please email brandimichelleliving@gmail.com directly.";
+          "Something went wrong sending your request. Please email brandimichelleliving@gmail.com directly.";
         note.classList.add("error");
       }
       return;
@@ -42,7 +44,7 @@ if (form) {
 
     form.reset();
     if (note) {
-      note.textContent = "Thanks — your message has been sent. I'll be in touch soon.";
+      note.textContent = "Thanks — your audit request is in. I'll follow up to find a time.";
       note.classList.add("success");
     }
   });

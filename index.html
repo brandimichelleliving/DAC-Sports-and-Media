@@ -45,6 +45,7 @@
       <a href="#who-we-serve"><span class="nav-num">02</span>Who I Serve</a>
       <a href="#about"><span class="nav-num">03</span>Background</a>
       <a href="#track-record"><span class="nav-num">04</span>Experience</a>
+      <a href="#audit"><span class="nav-num">05</span>Audit Call</a>
       <a href="#contact" class="nav-cta">Start a Conversation</a>
     </nav>
 
@@ -294,6 +295,54 @@
     </div>
   </section>
 
+  <!-- AUDIT CALL -->
+  <section class="audit" id="audit">
+    <div class="hero-glow audit-glow" aria-hidden="true"></div>
+    <div class="container audit-inner">
+      <div class="audit-copy reveal">
+        <p class="section-eyebrow">05 &mdash; Audit Call</p>
+        <h2 class="section-title">Get an outside read on your partnerships &amp; sponsorships.</h2>
+        <p class="section-sub">A focused session to review what's working, what's leaving value on the table, and where to focus next &mdash; no pitch, just a straight audit of your program.</p>
+      </div>
+
+      <form class="contact-form reveal" id="audit-form">
+        <div class="form-row">
+          <label for="audit-name">Name</label>
+          <input type="text" id="audit-name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="audit-email">Email</label>
+          <input type="email" id="audit-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="audit-company">Company / Brand</label>
+          <input type="text" id="audit-company" name="company" autocomplete="organization">
+        </div>
+        <div class="form-row">
+          <label for="audit-focus">Focus area</label>
+          <select id="audit-focus" name="focus">
+            <option value="Brand Activation & Events">Brand Activation &amp; Events</option>
+            <option value="Sponsorship Agreements & Negotiation">Sponsorship Agreements &amp; Negotiation</option>
+            <option value="Brand Campaign Planning">Brand Campaign Planning</option>
+            <option value="Brand Strategy & Positioning">Brand Strategy &amp; Positioning</option>
+            <option value="Strategic Partnerships">Strategic Partnerships</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="audit-availability">A few times that work for you</label>
+          <textarea id="audit-availability" name="availability" rows="3" placeholder="Include your time zone"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="audit-message">Anything else to share?</label>
+          <textarea id="audit-message" name="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Request an Audit Call</button>
+        <p class="form-note" id="audit-form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="hero-glow contact-glow" aria-hidden="true"></div>
@@ -359,6 +408,7 @@
         <a href="#who-we-serve">Who I Serve</a>
         <a href="#about">Background</a>
         <a href="#track-record">Experience</a>
+        <a href="#audit">Audit Call</a>
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer-meta">&copy; <span id="year"></span> DAC Sports &amp; Media. All rights reserved.</p>
@@ -368,5 +418,6 @@
 
 <script src="js/main.js"></script>
 <script type="module" src="js/contact-form.js"></script>
+<script type="module" src="js/audit-form.js"></script>
 </body>
 </html>

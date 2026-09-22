@@ -646,6 +646,20 @@ section { padding: 130px 0; position: relative; z-index: 1; }
 
 /* ---------------- Contact ---------------- */
 
+.audit {
+  background: var(--near-black);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+.audit-glow {
+  inset: -20% -10% auto -10%;
+  height: 80%;
+  background: radial-gradient(700px 460px at 75% 10%, rgba(224, 170, 62, 0.12), transparent 65%);
+}
+.audit-copy .section-sub { color: var(--muted-on-dark); max-width: 480px; }
+
 .contact {
   background: var(--black);
   position: relative;
@@ -657,7 +671,8 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   background: radial-gradient(700px 460px at 25% 10%, rgba(224, 170, 62, 0.14), transparent 65%);
 }
 
-.contact-inner {
+.contact-inner,
+.audit-inner {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 72px;
@@ -800,7 +815,8 @@ section { padding: 130px 0; position: relative; z-index: 1; }
 @media (max-width: 980px) {
   .about-inner { grid-template-columns: 1fr; }
   .about-expertise { position: static; border-top: 1px solid var(--line-light); padding-top: 32px; }
-  .contact-inner { grid-template-columns: 1fr; }
+  .contact-inner,
+  .audit-inner { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
   section { padding: 96px 0; }
 }
