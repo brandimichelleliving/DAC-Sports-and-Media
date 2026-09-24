@@ -547,61 +547,168 @@ section { padding: 130px 0; position: relative; z-index: 1; }
 
 /* ---------------- Services ---------------- */
 
-.services { background: var(--paper); }
+.services { background: var(--paper); padding-bottom: 0; }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* Base state: no JS / narrow viewport — panels render as a normal stacked list */
+.services-scroll { }
+
+.services-pin {
+  display: block;
 }
 
-.service-card {
-  position: relative;
+.services-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px 130px;
+}
+
+.services-panel {
+  position: static;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
   background: var(--paper-alt);
   border: 1px solid var(--line-light);
-  border-radius: 16px;
-  padding: 36px 32px;
-  transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -24px rgba(20, 24, 31, 0.25);
-  border-color: transparent;
+  border-radius: 20px;
+  padding: 48px 40px;
 }
 
-.service-card-num {
-  position: absolute;
-  top: 28px;
-  right: 32px;
-  font-family: var(--font-mono-display);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  color: var(--muted-on-light-soft);
+.services-panel-inner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: none;
+  padding: 0;
 }
 
-.service-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+.services-panel-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
 }
-.service-icon svg { width: 24px; height: 24px; }
-.service-icon.c1 { background: rgba(41, 84, 224, 0.1); color: var(--cobalt); }
-.service-icon.c2 { background: rgba(214, 41, 58, 0.08); color: var(--crimson); }
+.services-panel-icon svg { width: 40px; height: 40px; }
+.services-panel-icon.c1 { background: rgba(41, 84, 224, 0.1); color: var(--cobalt); }
+.services-panel-icon.c2 { background: rgba(214, 41, 58, 0.08); color: var(--crimson); }
 
-.service-card h3 {
-  font-size: 1.25rem;
-  color: var(--ink);
-  margin-bottom: 12px;
-  padding-right: 20px;
+.services-panel-eyebrow {
+  display: block;
+  font-family: var(--font-mono-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
 }
-.service-card p {
-  font-size: 0.98rem;
+.services-panel-eyebrow.c1 { color: var(--cobalt); }
+.services-panel-eyebrow.c2 { color: var(--crimson); }
+
+.services-panel-body h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.services-panel-body p {
+  font-size: 1.05rem;
   color: var(--muted-on-light);
+  max-width: 560px;
+  margin: 0 0 20px;
+}
+
+.services-progress {
+  display: none;
+}
+.services-dot {
+  font-family: var(--font-mono-display);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Enhanced state: JS-confirmed capable viewport — pinned, rotating panels */
+.services-scroll.is-pinned {
+  height: calc(var(--panel-count, 5) * 100vh);
+  position: relative;
+}
+.services-scroll.is-pinned .services-pin {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.services-scroll.is-pinned .services-panels {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: none;
   margin: 0;
+  padding: 0;
+  display: block;
+}
+.services-scroll.is-pinned .services-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  pointer-events: none;
+}
+.services-scroll.is-pinned .services-panel.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.services-scroll.is-pinned .services-panel-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+  grid-template-columns: 160px 1fr;
+}
+.services-scroll.is-pinned .services-panel-icon {
+  width: 100px;
+  height: 100px;
+}
+.services-scroll.is-pinned .services-panel-icon svg { width: 46px; height: 46px; }
+.services-scroll.is-pinned .services-panel-body p { font-size: 1.15rem; }
+
+.services-scroll.is-pinned .services-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.services-scroll.is-pinned .services-dot span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line-light);
+  font-size: 0.75rem;
+  color: var(--muted-on-light-soft);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.services-scroll.is-pinned .services-dot.is-active span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
 }
 
 .service-tags {
@@ -944,7 +1051,7 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   .partner-logos { grid-template-columns: repeat(2, 1fr); }
   .case-block-grid { grid-template-columns: 1fr; gap: 40px; }
   .case-results { grid-template-columns: 1fr; }
-  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-panel-inner { grid-template-columns: 90px 1fr; gap: 32px; }
   section { padding: 96px 0; }
 }
 
@@ -978,7 +1085,9 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   .hero-stats { grid-template-columns: 1fr; gap: 28px; }
   .hero-bg-type { font-size: 16rem; }
 
-  .service-grid { grid-template-columns: 1fr; }
+  .services-panel-inner { grid-template-columns: 1fr; text-align: left; gap: 20px; }
+  .services-panels { padding: 0 24px 90px; gap: 16px; }
+  .services-panel { padding: 32px 24px; }
 
   .who-grid { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: 1fr; }
