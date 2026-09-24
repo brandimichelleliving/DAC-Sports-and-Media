@@ -3,16 +3,16 @@
 --------------------------------------------------- */
 
 :root {
-  --paper: #fbf7ef;
-  --paper-alt: #f1e9d8;
+  --paper: #ffffff;
+  --paper-alt: #f3f4f7;
   --ink: #14181f;
   --dark-footer: #0b1220;
   --muted-on-light: rgba(20, 24, 31, 0.62);
   --muted-on-light-soft: rgba(20, 24, 31, 0.4);
-  --muted-on-dark: rgba(251, 247, 239, 0.7);
-  --muted-on-dark-soft: rgba(251, 247, 239, 0.45);
-  --line-light: rgba(20, 24, 31, 0.12);
-  --line-dark: rgba(251, 247, 239, 0.14);
+  --muted-on-dark: rgba(255, 255, 255, 0.7);
+  --muted-on-dark-soft: rgba(255, 255, 255, 0.45);
+  --line-light: rgba(20, 24, 31, 0.1);
+  --line-dark: rgba(255, 255, 255, 0.14);
   --cobalt: #2954e0;
   --cobalt-deep: #1e3fae;
   --amber: #f2a93b;
@@ -160,7 +160,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(251, 247, 239, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line-light);
 }
