@@ -4,6 +4,14 @@ var form = document.getElementById("contact-form");
 var note = document.getElementById("form-note");
 
 if (form) {
+  var interestParam = new URLSearchParams(window.location.search).get("interest");
+  if (interestParam && form.looking_for) {
+    var matchingOption = Array.prototype.find.call(form.looking_for.options, function (opt) {
+      return opt.value === interestParam;
+    });
+    if (matchingOption) form.looking_for.value = interestParam;
+  }
+
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 

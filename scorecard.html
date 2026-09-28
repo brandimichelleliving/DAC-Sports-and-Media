@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand-Ready Scorecard | DAC Sports &amp; Media</title>
+<meta name="description" content="Take the 2-minute Brand-Ready Scorecard. Answer 10 quick questions, get your score out of 100, and see the three fixes that will make the biggest difference.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">DAC</span>
+      <span class="brand-name">Sports<em>&amp;</em>Media</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="/#brands"><span class="nav-num">01</span>For Brands</a>
+      <a href="/athletes"><span class="nav-num">02</span>For Athletes</a>
+      <a href="/scorecard"><span class="nav-num">03</span>Brand-Ready Scorecard</a>
+      <a href="/about"><span class="nav-num">04</span>About</a>
+      <a href="/contact"><span class="nav-num">05</span>Contact</a>
+      <a href="/contact" class="nav-cta">Book a Discovery Call</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="quiz-section">
+    <div class="container quiz-container">
+
+      <!-- INTRO -->
+      <div class="quiz-screen is-active" data-screen="intro">
+        <p class="section-eyebrow">Brand-Ready Scorecard</p>
+        <h1 class="quiz-intro-title">How ready are you for <em>brand deals?</em></h1>
+        <p class="quiz-intro-body">10 questions. 2 minutes. Find out what brands see when they look at your profile.</p>
+        <button type="button" class="btn btn-primary" data-action="start">Start</button>
+      </div>
+
+      <!-- QUESTION -->
+      <div class="quiz-screen" data-screen="question" hidden>
+        <div class="quiz-progress"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+        <p class="quiz-question-count" id="quiz-question-count"></p>
+        <h2 class="quiz-question-text" id="quiz-question-text"></h2>
+        <div class="quiz-answers" id="quiz-answers"></div>
+        <button type="button" class="quiz-back" id="quiz-back" data-action="back">&larr; Back</button>
+      </div>
+
+      <!-- EMAIL GATE -->
+      <div class="quiz-screen" data-screen="email" hidden>
+        <p class="section-eyebrow">Almost Done</p>
+        <h2 class="quiz-email-title">Your score is ready.</h2>
+        <form class="contact-form" id="quiz-email-form">
+          <div class="form-row">
+            <label for="quiz-first-name">First name</label>
+            <input type="text" id="quiz-first-name" name="firstName" required autocomplete="given-name">
+          </div>
+          <div class="form-row">
+            <label for="quiz-email">Email</label>
+            <input type="email" id="quiz-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="quiz-sport">Sport</label>
+            <input type="text" id="quiz-sport" name="sport">
+          </div>
+          <div class="form-row">
+            <label for="quiz-handle">Instagram or TikTok handle</label>
+            <input type="text" id="quiz-handle" name="handle" placeholder="@yourhandle">
+          </div>
+          <div class="form-row form-row-checkbox">
+            <label for="quiz-age"><input type="checkbox" id="quiz-age" name="over13" required> I'm 13 or older</label>
+          </div>
+          <div class="form-row form-row-checkbox">
+            <label for="quiz-optin"><input type="checkbox" id="quiz-optin" name="newsletterOptIn"> Send me tips and updates</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">See My Score</button>
+          <p class="form-note" id="quiz-email-note" role="status" aria-live="polite"></p>
+          <p class="quiz-fine-print">No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="quiz-screen" data-screen="results" hidden>
+        <p class="section-eyebrow">Your Results</p>
+        <div class="quiz-score" id="quiz-score">0</div>
+        <p class="quiz-score-label">out of 100</p>
+        <h2 class="quiz-band-title" id="quiz-band-title"></h2>
+        <p class="quiz-band-message" id="quiz-band-message"></p>
+
+        <h3 class="quiz-fixes-title">Your Top 3 Fixes</h3>
+        <ol class="quiz-fixes" id="quiz-fixes"></ol>
+
+        <div class="quiz-results-cta">
+          <h3>Want a personal review?</h3>
+          <p>We'll look at your profile the way a brand would and show you exactly what to fix.</p>
+          <a href="/athletes#audit" class="btn btn-primary">Get Your Free Brand Audit</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="/" class="brand">
+        <span class="brand-mark">DAC</span>
+        <span class="brand-name">Sports<em>&amp;</em>Media</span>
+      </a>
+      <a href="/contact" class="footer-cta">Book a Discovery Call &rarr;</a>
+    </div>
+    <div class="footer-inner">
+      <nav class="footer-nav">
+        <a href="/#brands">For Brands</a>
+        <a href="/athletes">For Athletes</a>
+        <a href="/scorecard">Brand-Ready Scorecard</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <p class="footer-meta">&copy; <span id="year"></span> DAC Sports &amp; Media. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/scorecard.js"></script>
+</body>
+</html>
