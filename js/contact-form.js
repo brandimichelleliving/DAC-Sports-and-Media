@@ -11,7 +11,10 @@ if (form) {
     var name = form.name.value.trim();
     var email = form.email.value.trim();
     var company = form.company.value.trim();
-    var interest = form.interest.value;
+    var role = form.role.value.trim();
+    var lookingFor = form.looking_for.value;
+    var budgetRange = form.budget_range.value;
+    var timing = form.timing.value;
     var message = form.message.value.trim();
 
     if (submitBtn) submitBtn.disabled = true;
@@ -24,8 +27,11 @@ if (form) {
       name: name,
       email: email,
       company: company || null,
-      interest: interest,
-      message: message
+      role: role || null,
+      looking_for: lookingFor,
+      budget_range: budgetRange,
+      timing: timing,
+      message: message || null
     });
 
     if (submitBtn) submitBtn.disabled = false;

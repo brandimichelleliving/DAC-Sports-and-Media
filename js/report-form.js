@@ -1,7 +1,7 @@
 import { supabase } from "./supabase-client.js";
 
-var form = document.getElementById("audit-form");
-var note = document.getElementById("audit-form-note");
+var form = document.getElementById("report-form");
+var note = document.getElementById("report-form-note");
 
 if (form) {
   form.addEventListener("submit", async function (e) {
@@ -11,9 +11,7 @@ if (form) {
     var name = form.name.value.trim();
     var email = form.email.value.trim();
     var company = form.company.value.trim();
-    var focusArea = form.focus.value;
-    var availability = form.availability.value.trim();
-    var message = form.message.value.trim();
+    var goal = form.goal.value.trim();
 
     if (submitBtn) submitBtn.disabled = true;
     if (note) {
@@ -21,13 +19,11 @@ if (form) {
       note.classList.remove("success", "error");
     }
 
-    var result = await supabase.from("audit_requests").insert({
+    var result = await supabase.from("report_requests").insert({
       name: name,
       email: email,
       company: company || null,
-      focus_area: focusArea,
-      availability: availability || null,
-      message: message || null
+      goal: goal || null
     });
 
     if (submitBtn) submitBtn.disabled = false;
@@ -44,7 +40,7 @@ if (form) {
 
     form.reset();
     if (note) {
-      note.textContent = "Thanks — your audit request is in. I'll follow up to find a time.";
+      note.textContent = "Thanks — your report request is in. I'll follow up shortly.";
       note.classList.add("success");
     }
   });
