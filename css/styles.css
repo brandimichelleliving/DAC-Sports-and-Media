@@ -14,13 +14,11 @@
   --violet: #7c3aed;
   --violet-bright: #9d5cff;
   --violet-deep: #5b21b6;
-  --pink: #ec4899;
-  --coral-pink: #fb7185;
   --teal: #4ecdc4;
   --teal-deep: #2fa89f;
   --error: #ff6b6b;
 
-  --gradient-ombre: linear-gradient(135deg, var(--violet), var(--pink) 60%, var(--coral-pink));
+  --gradient-ombre: linear-gradient(135deg, var(--violet), var(--teal));
 
   --font-display: "Fraunces", "Georgia", serif;
   --font-mono-display: "Bebas Neue", "Space Grotesk", sans-serif;
@@ -83,7 +81,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------------- Ombre outline (used on all "boxes") ---------------- */
 
 .who-card,
-.stat-card,
 .partner-logo,
 .services-panel,
 .case-gallery-item,
@@ -93,7 +90,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: box-shadow 0.3s ease;
 }
 .who-card::before,
-.stat-card::before,
 .partner-logo::before,
 .services-panel::before,
 .case-gallery-item::before,
@@ -112,15 +108,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: opacity 0.3s ease;
 }
 .who-card:hover,
-.stat-card:hover,
 .partner-logo:hover,
 .services-panel:hover,
 .case-gallery-item:hover,
 .case-result-item:hover {
-  box-shadow: 0 0 32px -6px rgba(124, 58, 237, 0.35), 0 0 32px -6px rgba(236, 72, 153, 0.25);
+  box-shadow: 0 0 32px -6px rgba(124, 58, 237, 0.35), 0 0 32px -6px rgba(78, 205, 196, 0.25);
 }
 .who-card:hover::before,
-.stat-card:hover::before,
 .partner-logo:hover::before,
 .services-panel:hover::before,
 .case-gallery-item:hover::before,
@@ -153,7 +147,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
 }
 .btn-primary:hover {
-  box-shadow: 0 8px 28px -6px rgba(124, 58, 237, 0.5), 0 8px 28px -6px rgba(236, 72, 153, 0.35);
+  box-shadow: 0 8px 28px -6px rgba(124, 58, 237, 0.5), 0 8px 28px -6px rgba(78, 205, 196, 0.35);
 }
 
 .btn-ghost {
@@ -244,7 +238,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-left: 8px;
   transition: box-shadow 0.3s ease;
 }
-.nav-cta:hover { box-shadow: 0 6px 20px -4px rgba(124, 58, 237, 0.5), 0 6px 20px -4px rgba(236, 72, 153, 0.35); }
+.nav-cta:hover { box-shadow: 0 6px 20px -4px rgba(124, 58, 237, 0.5), 0 6px 20px -4px rgba(78, 205, 196, 0.35); }
 
 .nav-toggle {
   display: none;
@@ -878,48 +872,6 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   color: var(--muted-on-dark);
 }
 
-/* ---------------- Experience (bold stats) ---------------- */
-
-.track-record { background: var(--obsidian-alt); }
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.stat-card {
-  background: var(--obsidian-card);
-  border-radius: 14px;
-  padding: 44px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: background 0.3s ease;
-}
-.stat-card:hover { background: #212130; }
-
-.stat-num {
-  font-family: var(--font-mono-display);
-  font-weight: 400;
-  font-size: clamp(2rem, 2.8vw, 2.6rem);
-  color: var(--violet-bright);
-  letter-spacing: 0.01em;
-}
-.stat-num-text {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(1.5rem, 2vw, 1.9rem);
-  color: var(--teal);
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--muted-on-dark);
-  line-height: 1.5;
-}
-
 /* ---------------- Audit + Contact ---------------- */
 
 .audit {
@@ -1093,7 +1045,6 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   .about-expertise { position: static; border-top: 1px solid var(--line-dark); padding-top: 32px; }
   .contact-inner,
   .audit-inner { grid-template-columns: 1fr; }
-  .stat-grid { grid-template-columns: repeat(2, 1fr); }
   .who-grid { grid-template-columns: 1fr; }
   .partner-logos { grid-template-columns: repeat(2, 1fr); }
   .case-block-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1137,7 +1088,6 @@ section { padding: 130px 0; position: relative; z-index: 1; }
   .services-panel { padding: 32px 24px; }
 
   .who-grid { grid-template-columns: 1fr; }
-  .stat-grid { grid-template-columns: 1fr; }
   .partner-logos { grid-template-columns: 1fr; }
   .case-gallery { grid-template-columns: 1fr; }
   .case-hero { padding: 120px 0 60px; }
